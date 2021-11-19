@@ -1,0 +1,35 @@
+<h1> Benjie T. Parinas </h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Tabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="tab-slider--nav">
+      <ul class="tab-slider--tabs">
+        <li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">personal info</li>
+        <li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">gallery</li>
+      </ul>
+    </div>
+    <div class="tab-slider--container" [ngSwitch]="viewMode">
+      <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+        <p>NAME: BENJIE T. PARINAS</p>
+        <p>EMAIL:PARINASBENJIE85@GMAIL.COM</p>
+        <p>CONTACT NO:09486787346</p>
+        <p>ADDRESS:CUYAPO,NUEVVA ECIJA</p>
+        <p>BIRTHDAY: 07/09/2001
+      </div>
+      <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+        
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
